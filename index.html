@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-game">
+        <h1>Simon Says Game</h1>
+        <h2>Click on START to start the game</h2>
+        <h3></h3>
+        <div class="box">
+            <div class="box-top">
+            <div class="btn btn1" id="button-one" type="button"></div>
+            <div class="btn btn2" id="button-two" type="button"></div>
+        </div>
+        <div class="box-bottom">
+            <div class="btn btn3" id="button-three" type="button"></div>
+            <div class="btn btn4" id="button-four" type="button"></div>
+        </div>
+
+        <h2 id="score"></h2>
+        <button id="start-btn">START</button>
+        <br><br>
+        <button id="score-card">Show Score Card</button>
+        <table id="score-table">
+            <tr>
+                <th>Round</th>
+                <th>Score</th>
+            </tr>
+            
+        </table>
+        <br><br>
+        <button id="help-btn">Show How to Play</button>
+    </div>
+    
+    <div class="help">
+        
+        <h3>HOW TO PLAY 'SIMON SAYS GAME'</h3>
+        <ul> RULES : 
+            <li>Click on start to start the game.</li>
+            <li>One of the four buttons will blink (color changes to white for a very short moment). <br>You need to remember which button blinked and click on it to move to next level.</li>
+            <li>If you click the right button you will be promoted to the next level.</li>
+            <li>When you're promoted to the next level a new button will blink.</li>
+            <li>You need to remember the order of buttons blinked click on both the buttons in that same order. </li>
+            <li>For example, if on clicking start 'green' button blinks then in level 1 you need to click only on 'green' button. 
+                If in the next level i.e at level 2 'blue' button blinks then you need to click on 'green' button first and then 
+                'blue' button. In next level if 'red' blinks then you need to click on 'green', 'blue' and 'red' respectively. The game continues the same way for higher levels too.
+            </li>
+            <li>If you click all the buttons in correct order in a particular level then only you can play the next level.</li>
+            <li>You can see that no. of buttons you need to click in a particular level is equal to that level no.</li>
+            <li>If you click any wrong button the game stops in that moment.</li>
+            <li>Your score is number of levels you have successfully completed in that round.</li>
+        </ul>
+        <ul>
+            REMEMBER:
+            <li>To start a new round click on 'RESTART'.</li>
+            <li>Don't refresh the page if you want to see scores of the rounds you played continuously.</li>
+            <li>You can play as many rounds as you want.</li>
+            <li>To know scores of all the rounds you have played click on 'Show Score Card' button.</li>
+            <li>You can also see the highest score among all the rounds played.</li>
+        </ul>
+        <h3>Let's challenge your memory.</h3>
+    </div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    display: flex ;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: burlywood;
+    
+}
+
+.box-top {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.box-bottom {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btn {
+    height: 10vh;
+    width: 10vh;
+    border: 1vh solid black;
+    border-radius: 2vh;
+    margin: 10px;
+}
+
+
+.btn1 {  
+   background-color: rgb(209, 109, 109);
+}
+
+.btn2 {
+    background-color: rgb(14, 122, 211);
+}
+
+.btn3 {
+    background-color: rgb(85, 201, 91);
+}
+
+.btn4 {
+    background-color: rgb(129, 48, 241);
+}
+
+#start-btn {
+    height: 50px;
+    width: 100px;
+    font-size: larger;
+    background-color: chocolate;
+}
+
+#score-card {
+    background-color: rgb(4, 89, 19);
+    color: white;
+}
+
+#help-btn {
+    color: wheat;
+    background-color: darkolivegreen;
+}
+#score-table {
+
+    width: 40vh;
+    border-collapse: collapse;
+    display: none;
+}
+
+th {
+    border: 1px solid black;
+   width: 20vh;
+}
+
+
+.help li {
+    text-align: justify;
+}
+
+.help {
+    display: none;
+}
