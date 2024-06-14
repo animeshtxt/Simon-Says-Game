@@ -119,9 +119,9 @@ function reset () {
     level = 0 ;
     
     allBtns[0].style.backgroundColor = "rgb(209, 109, 109)";
-    allBtns[1].style.backgroundColor = "rgb(14, 122, 211)";
+    allBtns[1].style.backgroundColor = "rgb(18, 99, 164)";
     allBtns[2].style.backgroundColor = "rgb(85, 201, 91)" ;
-    allBtns[3].style.backgroundColor = "rgb(129, 48, 241)" ;
+    allBtns[3].style.backgroundColor = "rgb(201, 69, 32)" ;
     
 }
 
