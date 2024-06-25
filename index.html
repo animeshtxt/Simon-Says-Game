@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Says Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn6.aptoide.com/imgs/f/5/2/f5221283df0fa2e5544d6a759cc8f379_icon.png">
     
 </head>
 <body>
     <div class="main-game">
         <h1>Simon Says Game</h1>
-        <h2>Click on START to start the game</h2>
+        <h2 id="header">Click on START to start the game</h2>
         <h3></h3>
         <div class="box">
             <div class="box-top">
@@ -26,13 +27,14 @@
         <h2 id="score"></h2>
         <button id="start-btn">START</button>
         <br><br>
-        <button id="score-card">Show Score Card</button>
-        <table id="score-table">
+        <button id="score-card-btn">Show Score Card</button>
+        <br>
+        <table id="score-card">
             <tr>
                 <th>Round</th>
                 <th>Score</th>
             </tr>
-            <tr id="initScore">
+            <tr id="init-score">
                 <th>0</th>
                 <th>0</th>
             </tr>
@@ -45,30 +47,34 @@
     <div class="help">
         
         <h3 id="rules">HOW TO PLAY 'SIMON SAYS GAME'</h3>
-        <ul > RULES : 
-            <li>Click on start to start the game.</li>
+        <h5>RULES :</h5>
+        <ul >  
+            <li>Click on 'START' to start the game.</li>
             <li>One of the four buttons will blink (color changes to white for a very short moment). <br>You need to remember which button blinked and click on it to move to next level.</li>
             <li>If you click the right button you will be promoted to the next level.</li>
             <li>When you're promoted to the next level a new button will blink.</li>
-            <li>You need to remember the order of buttons blinked click on both the buttons in that same order. </li>
+            <li>You need to remember the order of buttons blinked in each level and click on them in that same order. </li>
             <li>For example, if on clicking start 'green' button blinks then in level 1 you need to click only on 'green' button. 
                 If in the next level i.e at level 2 'blue' button blinks then you need to click on 'green' button first and then 
-                'blue' button. In next level if 'red' blinks then you need to click on 'green', 'blue' and 'red' respectively. The game continues the same way for higher levels too.
+                'blue' button. In next level if 'red' blinks then you need to click on 'green' then 'blue' and then 'red' button respectively. The game continues the same way for the subsequent levels too.
             </li>
             <li>If you click all the buttons in correct order in a particular level then only you can play the next level.</li>
             <li>You can see that no. of buttons you need to click in a particular level is equal to that level no.</li>
-            <li>If you click any wrong button the game stops in that moment.</li>
+            <li>If you click any wrong button the game ends there for that round.</li>
             <li>Your score is number of levels you have successfully completed in that round.</li>
         </ul>
+        <h5>REMEMBER :</h5>
         <ul>
-            REMEMBER:
             <li>To start a new round click on 'RESTART'.</li>
-            <li>Don't refresh the page if you want to see scores of the rounds you played continuously.</li>
+            <li>Don't refresh the page unless you want to play a new set of rounds of the game.</li>
+            <li>Refreshing the page will loose the score card data.</li>
             <li>You can play as many rounds as you want.</li>
+            <li>Don't rush , don't click the buttons too fast. There is no time bound in the game. Rushing may crash it.</li>
             <li>To know scores of all the rounds you have played click on 'Show Score Card' button.</li>
             <li>You can also see the highest score among all the rounds played.</li>
         </ul>
-        <h3>Let's challenge your memory.</h3>
+        <h3>Sharpen your memory and Have Fun :)</h3>
+        <br><br>
     </div>
     
 
