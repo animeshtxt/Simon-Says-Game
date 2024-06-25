@@ -10,19 +10,23 @@ let body = document.querySelector('body');
 let scoreCard = document.querySelector('#score-card');
 let scoreTable = document.querySelector('#score-table');
 let scoreDisplay = 'none';
-let help = document.querySelector("#help-btn");
+let initScore = document.querySelector('#initScore');
+let helpBtn = document.querySelector("#help-btn");
 let helpBox = document.querySelector('.help');
+let rules = document.querySelector('#rules');
 let helpDisplay = 'none';
+let allBtns = document.querySelectorAll('.btn');
 
 start.addEventListener('click', function() {
 
+    h2.scrollIntoView({ behavior: 'smooth', block: 'center' });
     start.style.backgroundColor = 'rgb(255, 106, 0)' ;
     setTimeout(() => {
         start.style.backgroundColor = 'chocolate' ;
     }, 200);
     reset();
     
-    body.style.backgroundColor = "burlywood" ;
+    body.style.backgroundColor = "rgb(225, 170, 97)" ;
         setTimeout(() => {
             levelUp();
         }, 700);
@@ -35,7 +39,8 @@ function levelUp () {
     for( bton of allBtns){
         bton.addEventListener('click', btnPress)
     }
-    progress.innerHTML = `Correct guess : 0 &nbsp;&nbsp;&nbsp;&nbsp; Remaining : ${gameSeq.length+1}`;
+    score.innerHTML = '';
+    progress.innerHTML = `Correct guess : 0 &nbsp;&nbsp; Remaining : ${gameSeq.length+1}`;
     userSeq = [];
     level++ ;
     currLvl = 1 ;
@@ -66,12 +71,6 @@ function userFlash (btn){
 
 }
 
-let allBtns = document.querySelectorAll('.btn');
-    for( bton of allBtns){
-        bton.addEventListener('click', btnPress)
-    }
-
-
 function btnPress () {
     userFlash(this);
     userSeq.push(this.getAttribute('id'));
@@ -81,7 +80,7 @@ function btnPress () {
 function checkAns(idx) {
     
     if(userSeq[idx] === gameSeq[idx]){
-        progress.innerHTML = `Correct guess : ${idx+1} &nbsp;&nbsp;&nbsp;&nbsp; Remaining : ${gameSeq.length-idx-1}`;
+        progress.innerHTML = `Correct guess : ${idx+1} &nbsp;&nbsp; Remaining : ${gameSeq.length-idx-1}`;
         if(userSeq.length == gameSeq.length){
             
             for( bton of allBtns){
@@ -106,7 +105,7 @@ function checkAns(idx) {
         score.innerHTML = `Your score : ${level-1} <br> Highest score : ${highestScore}`;
         body.style.backgroundColor = 'red' ;
         setTimeout(function(){
-            body.style.backgroundColor = 'burlywood' ;
+            body.style.backgroundColor = 'rgb(225, 170, 97)' ;
         }, 1000)
         reset() ;
     }
@@ -139,6 +138,7 @@ scoreCard.addEventListener('click', function(){
 })
 
 function addScore (round, level){
+    initScore.remove();
     let tr = document.createElement('tr');
     scoreTable.appendChild(tr);
     tr.innerHTML = `<th>${round}</th> <th>${level-1}</th>` ;
@@ -146,15 +146,16 @@ function addScore (round, level){
     tr.style.width = "20vh" ;
 }
 
-help.addEventListener('click', function() {
+helpBtn.addEventListener('click', function() {
     if(helpDisplay === 'none'){
         helpBox.style.display = "block" ;
         helpDisplay = 'block';
-        help.innerText = 'Hide How to Play';
+        helpBtn.innerText = 'Hide How to Play';
+        rules.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }else{
         helpBox.style.display = "none"
         helpDisplay = 'none';
-        help.innerText = 'Show How to Play';
+        helpBtn.innerText = 'Show How to Play';
     }
     
 })
