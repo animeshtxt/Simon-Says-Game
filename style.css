@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     background-color: rgb(225, 170, 97);
     
 }
@@ -12,6 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#header {
+    margin: 0;
 }
 
 .box-top {
@@ -52,13 +56,15 @@ body {
 }
 
 #start-btn {
-    height: 50px;
-    width: 100px;
-    font-size: larger;
-    background-color: chocolate;
+    height: 5vh;
+    width: 15vh;
+    font-size: 2vh;
+    color: rgb(0, 0, 0);
+    background-color: rgb(218, 71, 58);
+    border-radius: 10px;
 }
 
-#score-card {
+#score-card-btn {
     background-color: rgb(4, 89, 19);
     color: white;
 }
@@ -67,7 +73,7 @@ body {
     color: wheat;
     background-color: darkolivegreen;
 }
-#score-table {
+#score-card {
 
     width: 40vh;
     border-collapse: collapse;
@@ -86,4 +92,5 @@ th {
 
 .help {
     display: none;
+    width: 80vw;
 }
