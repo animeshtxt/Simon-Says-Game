@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Says Game</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="main-game">
@@ -31,16 +32,20 @@
                 <th>Round</th>
                 <th>Score</th>
             </tr>
+            <tr id="initScore">
+                <th>0</th>
+                <th>0</th>
+            </tr>
             
         </table>
-        <br><br>
+        <br>
         <button id="help-btn">Show How to Play</button>
     </div>
     
     <div class="help">
         
-        <h3>HOW TO PLAY 'SIMON SAYS GAME'</h3>
-        <ul> RULES : 
+        <h3 id="rules">HOW TO PLAY 'SIMON SAYS GAME'</h3>
+        <ul > RULES : 
             <li>Click on start to start the game.</li>
             <li>One of the four buttons will blink (color changes to white for a very short moment). <br>You need to remember which button blinked and click on it to move to next level.</li>
             <li>If you click the right button you will be promoted to the next level.</li>
