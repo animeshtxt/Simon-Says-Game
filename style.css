@@ -62,16 +62,22 @@ body {
     color: rgb(0, 0, 0);
     background-color: rgb(218, 71, 58);
     border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 #score-card-btn {
     background-color: rgb(4, 89, 19);
     color: white;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 #help-btn {
     color: wheat;
     background-color: darkolivegreen;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 #score-card {
 
